@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "/home/pi/iris/tracker/main.py", line 118, in <module>
+    mongoDB(TASK_NAME, TEMPORARY_COORDINATES_FILE, DEVICE_ID)
+  File "/home/pi/iris/tracker/mongoDB.py", line 16, in mongoDB
+    print(f"{connect.admin.command('ismaster')}")
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/database.py", line 758, in command
+    read_preference, session) as (sock_info, secondary_ok):
+  File "/usr/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/mongo_client.py", line 1387, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/mongo_client.py", line 1346, in _select_server
+    server = topology.select_server(server_selector)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/topology.py", line 246, in select_server
+    address))
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/topology.py", line 203, in select_servers
+    selector, server_timeout, address)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/topology.py", line 229, in _select_servers_loop
+    self._condition.wait(common.MIN_HEARTBEAT_INTERVAL)
+  File "/usr/lib/python3.7/threading.py", line 300, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/pi/iris/tracker/main.py", line 118, in <module>
+    mongoDB(TASK_NAME, TEMPORARY_COORDINATES_FILE, DEVICE_ID)
+  File "/home/pi/iris/tracker/mongoDB.py", line 31, in mongoDB
+    time_iso = datetime.datetime(int(date_array[0]), int(date_array[1]),
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/pi/iris/tracker/main.py", line 118, in <module>
+    print(f"Sprawdzam polaczenie do bazy danych ...")
+  File "/home/pi/iris/tracker/mongoDB.py", line 16, in mongoDB
+    print(f"{connect.admin.command('ismaster')}")
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/database.py", line 758, in command
+    read_preference, session) as (sock_info, secondary_ok):
+  File "/usr/lib/python3.7/contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/mongo_client.py", line 1387, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/mongo_client.py", line 1346, in _select_server
+    server = topology.select_server(server_selector)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/topology.py", line 246, in select_server
+    address))
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/topology.py", line 203, in select_servers
+    selector, server_timeout, address)
+  File "/usr/local/lib/python3.7/dist-packages/pymongo/topology.py", line 229, in _select_servers_loop
+    self._condition.wait(common.MIN_HEARTBEAT_INTERVAL)
+  File "/usr/lib/python3.7/threading.py", line 300, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/pi/iris/tracker/main.py", line 30, in <module>
+    check_board_power = Power(serial_port).check_power()
+  File "/home/pi/iris/tracker/pihat.py", line 200, in check_power
+    answer = send_at('AT', 'OK', 1, self.serial_port)
+  File "/home/pi/iris/tracker/pihat.py", line 278, in send_at
+    if ser.inWaiting():
+NameError: name 'ser' is not defined
+Traceback (most recent call last):
+  File "/home/pi/iris/tracker/main.py", line 30, in <module>
+    check_board_power = Power(serial_port).check_power()
+  File "/home/pi/iris/tracker/pihat.py", line 200, in check_power
+    answer = send_at('AT', 'OK', 1, self.serial_port)
+  File "/home/pi/iris/tracker/pihat.py", line 278, in send_at
+    if ser.inWaiting():
+NameError: name 'ser' is not defined
+Traceback (most recent call last):
+  File "/home/pi/iris/tracker/main.py", line 114, in <module>
+    sleep(SECONDS_BETWEEN_READS)
+KeyboardInterrupt
